@@ -49,8 +49,7 @@ export default function OfertaPage() {
         { name: "Wsparcie psychologiczne (50 min)", price: "150 zł" },
         { name: "Konsultacja psychiatryczna (50 min)", price: "350 zł" },
         { name: "Diagnoza zaburzeń depresyjno-lękowych", price: "350 zł" },
-        { name: "Diagnoza ADHD", price: "350 zł" },
-        { name: "Terapia psychologiczna dziecka (50 min)", price: "120 zł" },
+        { name: "Terapia psychologiczna dziecka (50 min)", price: "150 zł" },
         {
           name: "Terapia psychologiczna dziecka - pakiet (4 x 50 min)",
           price: "460 zł",
@@ -63,6 +62,30 @@ export default function OfertaPage() {
           name: "Trening umiejętności społecznych (TUS) - grupowe (4x50 min)",
           price: "300 zł",
         },
+      ],
+    },
+    {
+      category: "BADANIA PSYCHOLOGICZNE POD KĄTEM SPEKTRUM AUTYZMU",
+      items: [
+        {
+          name: "ADOS-2 + ASRS (wywiad z rodzicem/opiekunem prawnym, badanie dziecka) – surowy wynik bez opisu",
+          price: "650 zł",
+        },
+        {
+          name: "Skrócony opis do badania ADOS-2 + ASRS",
+          price: "200 zł",
+        },
+        {
+          name: "ADOS-2 + ADI-R + ASRS (wywiad z rodzicem/opiekunem prawnym, badanie dziecka, wywiad z wychowawcą lub nauczycielem przedmiotowym, pełny opis, 2–3 h)",
+          price: "1200 zł",
+        },
+      ],
+    },
+    {
+      category: "BADANIA PSYCHOLOGICZNE POD KĄTEM ADHD",
+      items: [
+        { name: "MOXO (test)", price: "270 zł" },
+        { name: "MOXO + CONNERS (test / wywiad / opis)", price: "450 zł" },
       ],
     },
     {
@@ -112,20 +135,20 @@ export default function OfertaPage() {
       items: [
         {
           name: "Badanie pod kątem dysleksji, dysortografii i dysgrafii (120 minut)",
-          price: "460 zł",
+          price: "500 zł",
         },
         {
           name: "Konsultacja pedagogiczna (bez pisemnego wyniku - 50 minut)",
           price: "150 zł",
         },
         {
-          name: "Diagnoza pedagogiczna (z pisemnym wynikiem)",
-          price: "180 zł",
+          name: "Diagnoza pedagogiczna (z pisemnym wynikiem, 50 minut)",
+          price: "350 zł",
         },
-        { name: "Terapia pedagogiczna - (1x 50 minut)", price: "140 zł" },
+        { name: "Terapia pedagogiczna (50 minut)", price: "150 zł" },
         {
           name: "Terapia pedagogiczna grupowa (4 x 50 minut)",
-          price: "280 zł",
+          price: "300 zł",
         },
         {
           name: "Zajęcia z pedagogiem specjalnym z elementami terapii behawioralnej",
@@ -136,11 +159,11 @@ export default function OfertaPage() {
           price: "250 zł",
         },
         {
-          name: "Diagnoza gotowości szkolnej - test KOGS (3-5godz, rozłożonych na 2 dni)",
+          name: "Diagnoza gotowości szkolnej - test KOGS (3-5 godz., rozłożonych na 2 dni)",
           price: "600 zł",
         },
         {
-          name: "Diagnoza ucznia szczególnie zdolnego (3-5 godz, rozłożonych na 2 dni)",
+          name: "Diagnoza ucznia szczególnie zdolnego (3-5 godz., rozłożonych na 2 dni)",
           price: "600 zł",
         },
       ],
@@ -161,7 +184,7 @@ export default function OfertaPage() {
           price: "250 zł",
         },
         {
-          name: "Diagnoza neurologopedyczna (pisemny wynik, 50 minut)",
+          name: "Diagnoza neurologogopedyczna (pisemny wynik, 50 minut)",
           price: "290 zł",
         },
         { name: "Diagnoza KOJD-AFA (90-120 min)", price: "350 zł" },
@@ -170,18 +193,13 @@ export default function OfertaPage() {
           name: "Karta Oceny Logopedycznej Dziecka (120 min) - KOLD-PT",
           price: "350 zł",
         },
-        { name: "Terapia logopedyczna (50 minut)", price: "140 zł" },
-        {
-          name: "Terapia logopedyczna - pakiet ( 4x50 minut)",
-          price: "540 zł",
-        },
+        { name: "Terapia logopedyczna (50 minut)", price: "150 zł" },
         {
           name: "Terapia logopedyczna - grupowa (4x50 minut)",
           price: "280 zł",
         },
-        { name: "Terapia neurologopedyczna (50 minut)", price: "150 zł" },
         {
-          name: "Terapia neurologopedyczna - pakiet ( 4x50 minut)",
+          name: "Terapia neurologopedyczna - pakiet (4x50 minut)",
           price: "560 zł",
         },
       ],
@@ -202,22 +220,15 @@ export default function OfertaPage() {
     {
       category: "INTEGRACJA SENSORYCZNA (SI)",
       items: [
-        { name: "Diagnoza SI (pisemny wynik – 3 spotkania)", price: "420 zł" },
-        {
-          name: "Diagnoza SI - dzieci do 3 r.ż. (pisemny wynik – 3 spotkania)",
-          price: "450 zł",
-        },
-        { name: "Terapia SI (50 min)", price: "140 zł" },
-        { name: "Terapia SI - pakiet (8x50 min)", price: "1040 zł" },
-        { name: "Terapia SI - pakiet (4x50 min)", price: "540 zł" },
+        { name: "Diagnoza SI (pisemny wynik)", price: "550 zł" },
+        { name: "Terapia SI (50 min)", price: "150 zł" },
       ],
     },
     {
       category: "FIZJOTERAPIA",
       items: [
         { name: "Konsultacja fizjoterapeutyczna", price: "150 zł" },
-        { name: "Terapia fizjoterapeutyczna", price: "140 zł" },
-        { name: "Terapia fizjoterapeutyczna (8x50 minut)", price: "1080 zł" },
+        { name: "Terapia fizjoterapeutyczna", price: "150 zł" },
       ],
     },
   ];
@@ -229,7 +240,7 @@ export default function OfertaPage() {
           Magnolia Poradnia Psychologiczno-Pedagogiczna
         </CardTitle>
         <CardDescription className="">
-          Cennik ważny od 12.03.2024
+          Cennik ważny od 25.06.2025
         </CardDescription>
       </CardHeader>
       <CardContent>

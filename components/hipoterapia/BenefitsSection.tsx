@@ -2,7 +2,7 @@ import React from "react";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "../../utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 import { GiCheckMark } from "react-icons/gi";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
 

@@ -2,7 +2,7 @@ import { useAccessibility } from "@/lib/providers/accessibility-context";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "@/utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 

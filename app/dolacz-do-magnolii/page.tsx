@@ -96,9 +96,9 @@ export default function JoinTeamPage() {
                   </p>
                   <p>ul. Magnolii 25</p>
                   <p>44-207 Rybnik</p>
-                  <p>ul. Rudzka 13</p>
+                  {/* <p>ul. Rudzka 13</p>
                   <p>budynek B, III piętro, pok. 3.3</p>
-                  <p>44-200 Rybnik</p>
+                  <p>44-200 Rybnik</p> */}
                   <p>
                     Telefon/WhatsApp:{" "}
                     <a href="tel:502162365" className="underline">
@@ -113,7 +113,7 @@ export default function JoinTeamPage() {
 
         <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/assets/join.jpg"
+            src="/assets/join.png"
             alt="Zespół MAGNOLII"
             layout="fill"
             objectFit="cover"

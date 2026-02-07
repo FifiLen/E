@@ -3,15 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCircleArrowRight } from "react-icons/fa6";
-import { GiCheckMark } from "react-icons/gi";
-import { IoMdClose } from "react-icons/io";
+
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 import {
   Accordion,
@@ -43,7 +40,7 @@ export default function NDTBobath() {
         highContrast ? "bg-black text-yellow-400" : "bg-white"
       }`}
     >
-      {/* Introduction */}
+      
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
@@ -80,7 +77,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* History */}
+      
       <section className="py-6 md:py-12 bg-gray-100">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
@@ -117,7 +114,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* How it works */}
+      
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
@@ -154,7 +151,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* Who can benefit */}
+      
       <section className="py-6 md:py-12 bg-gray-100">
         <div className="container mx-auto px-6 md:px-12">
           <h2
@@ -227,7 +224,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* Preparation */}
+      
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
@@ -262,7 +259,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* What to expect */}
+      
       <section className="py-6 md:py-12 bg-gray-100">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
@@ -298,7 +295,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* Benefits */}
+      
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <h2
@@ -387,7 +384,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* FAQ */}
+      
       <section className="py-6 md:py-12 bg-gray-100">
         <div className="container mx-auto px-6 md:px-12">
           <h2
@@ -447,7 +444,7 @@ export default function NDTBobath() {
         </div>
       </section>
 
-      {/* Summary */}
+      
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <h2

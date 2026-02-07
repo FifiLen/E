@@ -1,10 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+
 import { useAccessibility } from "@/lib/providers/accessibility-context";
 
 const getFontSizeClass = (level: number) => {
@@ -195,31 +193,7 @@ export default function WWRDInfoPage() {
         </CardContent>
       </Card>
 
-      <Card
-        className={`mt-8 ${
-          highContrast ? "bg-gray-800 border-yellow-400" : ""
-        } border-none shadow-none`}
-      >
-        <CardContent className="flex justify-center">
-          <Button
-            asChild
-            className={`w-full sm:w-auto ${
-              highContrast
-                ? "bg-yellow-400 text-black hover:bg-yellow-500"
-                : "bg-[#921d7f] text-white hover:bg-[#7a1968]"
-            }`}
-          >
-            <Link
-              href="/assets/WWRD.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Pobierz pdf z instrukcją darmowych zajęć WWRD
-            </Link>
-          </Button>
-        </CardContent>
-      </Card>
+
     </div>
   );
 }

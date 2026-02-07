@@ -2,7 +2,7 @@ import React from "react";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "../../utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 import Image from "next/image";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
 

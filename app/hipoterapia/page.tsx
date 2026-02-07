@@ -1,4 +1,4 @@
-import HippotherapyComponent from "@/components/hipoterapia-components/hipoterapia";
+import HippotherapyComponent from "@/components/hipoterapia/hippotherapy";
 import React from "react";
 
 const Hipoterapia = () => {

@@ -6,7 +6,7 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
-import { FormularzComponent } from "@/components/forms/formularz";
+import ContactForm from "@/components/forms/formularz";
 
 interface FileLink {
   name: string;
@@ -157,7 +157,7 @@ export default function DownloadsPage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <FormularzComponent />
+          <ContactForm />
         </CardContent>
       </Card>
     </div>

@@ -29,7 +29,7 @@ const documents: DocumentLink[] = [
     filename: "Oświadczenie_o_zapoznaniu_się_z_regulaminem_zajęć_WWRD",
   },
   {
-    href: "/assets/Regulamin_zajęć_WWRD.zip",
+    href: "/assets/regulamin-zajec-wwrd.pdf",
     title: "Regulamin zajęć WWRD",
     filename: "Regulamin_zajęć_WWRD",
   },

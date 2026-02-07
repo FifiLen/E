@@ -165,7 +165,7 @@ Etap przedszkolny jest momentem, w&nbsp;którym rodzice i&nbsp;nauczyciele zaczy
       imageSrc: "/assets/diagnozaP2.jpg",
       imageAlt: "dziecko",
     },
-    // Add more sections as needed
+    
     {
       title: "Skontaktuj się z nami",
       description: `

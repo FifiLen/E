@@ -2,7 +2,7 @@ import React from "react";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "../../utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
 
 const IntroSection = () => {
@@ -43,25 +43,27 @@ const IntroSection = () => {
               łagodnymi zwierzętami do celów rehabilitacyjnych oraz rozwojowych.
               Hipoterapia jest nieoceniona przy leczeniu osób z dysfunkcjami
               fizycznymi, emocjonalnymi oraz rozwojowymi. W świecie koni możesz
-              przełamać lęki i pokonać własne słabości dzięki przebywaniu w
-              towarzystwie tych pięknych zwierząt, obcowanie z nimi, dotykanie,
-              a także poruszanie się na ich grzebiecie.
+              przełamać lęki i pokonać własne słabości. Dzięki przebywaniu w
+              towarzystwie tych majestatycznych zwierząt, obcowaniu z nimi,
+              dotykaniu, a także poruszaniu się na ich grzbiecie poczujesz moc
+              do zmian swojego życia na lepsze.
             </p>
             <p
               className={`${
                 highContrast ? "text-yellow-400" : "text-gray-700"
               } ${fontSizeClass} text-left mb-6`}
             >
-              Hipoterapia opiera się na wykorzystaniu ruchu tego majestatycznego
-              zwierzęcia jako „przedmiotu" terapeutycznego. Koń, poprzez swój
-              rytmiczny i powtarzalny ruch, imituje ludzki chód, co stymuluje
-              odpowiedzi na ów ruch w ciele jeźdźca. Osoba biorąca udział w
-              terapii siedzi na koniu, co wymaga od niej stabilizacji tułowia
-              oraz zachowania równowagi, to z kolei aktywuje wiele grup
-              mięśniowych. Terapia odbywa się pod nadzorem wykwalifikowanego
-              terapeuty hipoterapii, który dostosowuje zajęcia do indywidualnych
-              potrzeb pacjenta, nadzorując zarówno bezpieczeństwo, jak i
-              skuteczność terapii.
+              Hipoterapia opiera się na wykorzystaniu ruchu zwierzęcia jako
+              "narzędzia" terapeutycznego. Koń poprzez swój rytmiczny i
+              powtarzalny ruch imituje ludzki chód aktywizując organizm jeźdźca
+              do pracy, pobudzone zostają również receptory czucia głębokiego w
+              ciele człowieka poddanego terapii. Postawa siedząca jeźdźca
+              przyjmowana podczas jazdy wymaga dobrej stabilizacji tułowia oraz
+              utrzymania równowagi dynamicznej, co angażuje do wytężonej pracy
+              wiele różnych grup mięśniowych. Terapia odbywa się pod nadzorem
+              wykwalifikowanego terapeuty hipoterapii, który dostosowuje zajęcia
+              do indywidualnych potrzeb pacjenta, nadzorując zarówno
+              bezpieczeństwo, jak i skuteczność terapii.
             </p>
           </div>
         </div>

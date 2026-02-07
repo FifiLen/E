@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import ModernNav from "@/components/layout-components/nav";
-import { AccessibilityProvider } from "@/lib/providers/accessibility-context";
-import Footer from "@/components/layout-components/footer";
-import Banner from "@/components/home-page-components/baner";
-import "../styles/snowflake.css";
+
+
+
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
-import { AccessibilityPanel } from "@/components/panel-dostepnosci";
+import RootLayoutContent from "@/components/layout-components/RootLayoutContent";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-poppins",
 });
@@ -114,16 +112,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
-        <AccessibilityProvider>
-          <header>
-            <ModernNav />
-          </header>
-          <Banner />
-          <main id="main-content">{children}</main>
-          <AccessibilityPanel />
-          <Footer />
-        </AccessibilityProvider>
+      <body className="font-sans antialiased overflow-x-hidden">
+        <RootLayoutContent>{children}</RootLayoutContent>
         <GoogleTagManager gtmId="G-0QW3ZG23F5" />
       </body>
     </html>

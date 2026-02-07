@@ -15,7 +15,6 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
@@ -234,14 +233,9 @@ interface TherapyCard {
 }
 
 export default function TerapiaPar() {
-  const { highContrast, fontSizeLevel } = useAccessibility();
+  const { highContrast } = useAccessibility();
 
-  const getHeaderFontSizeClass = (level: number) => {
-    const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"];
-    return sizes[level] || "text-3xl";
-  };
 
-  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
 
   const therapySections: TherapySection[] = [
     {
@@ -370,13 +364,13 @@ Podczas terapii osoby uczą się skutecznej komunikacji, ustalania przyczyn konf
         highContrast ? "bg-black text-yellow-400" : "bg-white"
       }`}
     >
-      {/* Render the first therapy section */}
+      
       <TherapySectionComponent {...therapySections[0]} index={0} />
 
-      {/* Insert the TherapyCardsSection here */}
+      
       <TherapyCardsSection cards={therapyCards} />
 
-      {/* Render the remaining therapy sections */}
+      
       {therapySections.slice(1).map((section, index) => (
         <TherapySectionComponent
           key={index + 1}

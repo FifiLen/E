@@ -23,9 +23,11 @@ interface ServiceSection {
   accordionItems: { title: string; content: string }[];
   ctaText: string;
   ctaLink: string;
+  id: string;
 }
 
 const ServiceSectionComponent: React.FC<ServiceSection & { index: number }> = ({
+  id,
   title,
   description,
   imageSrc,
@@ -70,7 +72,7 @@ const ServiceSectionComponent: React.FC<ServiceSection & { index: number }> = ({
 
   return (
     <section className="py-12 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-0">
+      <div id={id} className="max-w-7xl mx-auto px-4 sm:px-0">
         <div
           className={`flex flex-col lg:flex-row items-stretch ${
             isEven ? "lg:flex-row" : "lg:flex-row-reverse"
@@ -155,6 +157,7 @@ export function AdultServicesComponent() {
 
   const serviceSections: ServiceSection[] = [
     {
+      id: "terapia-par",
       title: "Terapia dla Par",
       description:
         "Terapia par to proces, w którym dwoje ludzi pracuje nad poprawą jakości swojego związku poprzez rozwój wzorców komunikacji i interakcji, naukę rozwiązywania konfliktów oraz komunikowania własnych uczuć i potrzeb oraz zrozumienie partnera. <br /><br />Terapia skierowana jest zarówno do osób znajdujących się w związkach formalnych i nieformalnych, do osób znajdujących się w związkach partnerskich lub jednopłciowych.<br /><br />Podczas terapii osoby uczą się skutecznej komunikacji, ustalania przyczyn konfliktów oraz sposobów na ich rozwiązywanie z korzyścią dla obu stron. Ponadto, jednym z jej celów jest ogólna poprawa relacji oraz zwiększenie poczucia bliskości emocjonalnej.",
@@ -165,6 +168,7 @@ export function AdultServicesComponent() {
       ctaLink: "/wsparcie-dla-doroslych/terapia-dla-par",
     },
     {
+      id: "wsparcie-psychologiczne",
       title: "Wsparcie psychologiczne",
       description:
         "Wsparcie psychologiczne dla dorosłych ma na celu pomóc osobom w radzeniu sobie z różnorodnymi problemami. Może obejmować:<br/><br/>- Radzenie sobie z trudnościami życiowymi<br/> - Radzenie sobie ze stresem<br/> - Radzenie sobie z problemami emocjonalnymi<br/> - Radzenie sobie z zaburzeniami psychicznymi<br/> - Zidentyfikowanie i zrozumienie źródeł problemów<br/> - Opracowanie skutecznych strategii radzenia sobie<br/> - Osiągnięcie większej równowagi emocjonalnej<br/> - Poprawę jakości życia",
@@ -175,6 +179,7 @@ export function AdultServicesComponent() {
       ctaLink: "/kontakt",
     },
     {
+      id: "psychoterapia",
       title: "Psychoterapia",
       description:
         "Psychoterapia dla dorosłych to proces terapeutyczny, mający na celu wsparcie osób w radzeniu sobie z różnorodnymi trudnościami. Może obejmować:<br/><br/>- Radzenie sobie z trudnościami emocjonalnymi<br/>- Radzenie sobie z trudnościami psychologicznymi<br/>- Radzenie sobie z trudnościami behawioralnymi<br/>- Rozwijanie nowych strategii radzenia sobie<br/>- Wprowadzanie pozytywnych zmian w życiu<br/>- Praca nad lękiem, depresją i stresem<br/>- Rozwiązywanie problemów w relacjach<br/>- Radzenie sobie z kryzysami życiowymi",

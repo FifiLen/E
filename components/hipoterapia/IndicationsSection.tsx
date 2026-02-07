@@ -2,7 +2,7 @@ import { useAccessibility } from "@/lib/providers/accessibility-context";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "@/utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 
 import React from "react";
 
@@ -16,7 +16,7 @@ import {
 } from "../ui/accordion";
 
 const IndicationsSection = () => {
-  const { fontSizeLevel, highContrast } = useAccessibility();
+  const { fontSizeLevel } = useAccessibility();
   const fontSizeClass = getFontSizeClass(fontSizeLevel);
   const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
 

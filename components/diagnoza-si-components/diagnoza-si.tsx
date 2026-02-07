@@ -41,11 +41,7 @@ interface ServiceCard {
   type?: "blue" | "green";
 }
 
-interface GalleryImage {
-  src: string;
-  alt: string;
-  isVideo?: boolean;
-}
+
 
 const ServiceSectionComponent: React.FC<ServiceSection & { index: number }> = ({
   title,
@@ -259,58 +255,7 @@ const ServiceCardsSection: React.FC<{ cards: ServiceCard[] }> = ({ cards }) => {
   );
 };
 
-const GallerySection: React.FC<{ images: GalleryImage[]; title: string }> = ({
-  images,
-  title,
-}) => {
-  const { fontSizeLevel, highContrast } = useAccessibility();
-  const headerFontSizeClass =
-    ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"][
-      fontSizeLevel
-    ] || "text-3xl";
 
-  return (
-    <section className="py-12 md:py-24">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2
-          className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
-        >
-          {title}
-        </h2>
-        <div className="grid grid-cols-1 row-span-2 md:grid-cols-3 gap-4 mx-auto">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`relative w-full ${
-                index < 2 ? "h-128 md:row-span-2" : "h-64"
-              }`}
-            >
-              {image.isVideo ? (
-                <video
-                  src={image.src}
-                  className="rounded-lg object-cover w-full h-full"
-                  loop
-                  muted
-                  autoPlay
-                  playsInline
-                  onContextMenu={(e) => e.preventDefault()}
-                />
-              ) : (
-                <Image
-                  src={image.src}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                  alt={image.alt}
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default function TerapiaSIComponent() {
   const { highContrast, fontSizeLevel } = useAccessibility();
@@ -382,7 +327,7 @@ Pokonujemy tory przeszkód, aby trenować umiejętność wyboru, planowania i wy
 
 Wszystkie te zabiegi przyczyniają się do usprawnienia odbioru, przesyłania i opracowania informacji przez układ nerwowy dziecka. W przypadku nadwrażliwości lub podwrażliwości sensorycznej dostosowana zostaje reakcja organizmu w stosunku do intensywności bodźca.
       `,
-      imageSrc: "/assets/terapia-si/4.mp4",
+      imageSrc: "/assets/terapia-si/5.mp4",
       imageAlt: "Terapia SI Video",
     },
     {
@@ -443,9 +388,9 @@ Terapia SI w ramach zajęć WWR jest darmowa. Zapraszamy do skorzystania z nasze
       content: `
 Skontaktuj się z nami, aby umówić się na sesję.
 
-**Diagnoza SI - 450zł**
+**Diagnoza SI - 500zł**
 
-**Terapia SI - 140zł** *(50 minut)*
+**Terapia SI - 150zł** *(50 minut)*
       `,
       footerLink: "/kontakt",
       footerLinkText: "Kontakt",
@@ -463,7 +408,7 @@ Skontaktuj się z nami, aby umówić się na sesję.
         <ServiceSectionComponent key={index} {...section} index={index} />
       ))}
 
-      {/* Sekcja Diagnoza SI */}
+      
       <section className="py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2
@@ -475,7 +420,7 @@ Skontaktuj się z nami, aby umówić się na sesję.
         </div>
       </section>
 
-      {/* Sekcja Cennik */}
+      
       <section className="py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2

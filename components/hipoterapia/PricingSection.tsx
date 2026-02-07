@@ -2,7 +2,7 @@ import React from "react";
 import {
   getFontSizeClass,
   getHeaderFontSizeClass,
-} from "../../utils/fontSizeUtils";
+} from "@/lib/font-size-utils";
 import Link from "next/link";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { useAccessibility } from "@/lib/providers/accessibility-context";
@@ -71,10 +71,10 @@ const PricingSection = () => {
                   highContrast ? "text-yellow-400" : "text-gray-700"
                 } ${fontSizeClass} text-left mb-6`}
               >
-                Cena za komercyjną hipoterapię wynosi 100zł za 30 minut.
+                Cena za komercyjną hipoterapię wynosi 60zł za 45 minut.
                 Skontaktuj się z nami, aby umówić się na sesję.
               </p>
-              <p className="text-2xl font-semibold">100zł / 30 minut</p>
+              <p className="text-2xl font-semibold">60zł / 45 minut</p>
             </CardContent>
             <CardFooter>
               <Link

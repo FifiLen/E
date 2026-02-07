@@ -2,59 +2,19 @@
 
 import React from "react";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Clock, Snowflake } from "lucide-react";
-import { useAccessibility } from "@/lib/providers/accessibility-context";
-import { FormularzComponent } from "../forms/formularz";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import ContactForm from "../forms/formularz";
 
-const getFontSizeClass = (level: number) => {
-  const sizes = ["text-sm", "text-base", "text-lg", "text-xl", "text-2xl"];
-  return sizes[level] || "text-base";
-};
-
-const getHeaderFontSizeClass = (level: number) => {
-  const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"];
-  return sizes[level] || "text-3xl";
-};
-
-export default function WinterKontakt() {
-  const { fontSizeLevel, highContrast } = useAccessibility();
-
-  const fontSizeClass = getFontSizeClass(fontSizeLevel);
-  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
-
+export default function Kontakt() {
   return (
-    <div
-      className={`font-sans overflow-x-hidden ${
-        highContrast ? "bg-black text-yellow-400" : "bg-white"
-      }`}
-    >
-      <section className="py-6 md:py-20 relative">
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(40)].map((_, i) => (
-            <Snowflake
-              key={i}
-              className="text-blue-200 absolute animate-fall"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 10 + 5}s`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="container mx-auto relative z-10">
+    <div className="font-sans overflow-x-hidden bg-white">
+      <section className="">
+        <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Column 1: Contact Info + Form */}
+            
             <div className="space-y-8">
-              {/* Contact Info */}
-              <div
-                className={`${
-                  highContrast
-                    ? "bg-gray-800 bg-opacity-50 text-yellow-400"
-                    : "bg-transparent"
-                } rounded-lg p-6`}
-              >
+              
+              <div className="rounded-lg p-6">
                 <div className="mb-6">
                   <Image
                     src="/assets/logo/logo.png"
@@ -64,55 +24,45 @@ export default function WinterKontakt() {
                     className="mb-4"
                   />
                 </div>
-                <ul
-                  className={`space-y-4 font-semibold tracking-tight ${fontSizeClass}`}
-                >
-                  <li className="flex justify-start items-center gap-2">
-                    <Phone className="mr-2 text-blue-500" />
+                <ul className="space-y-4 font-semibold tracking-tight">
+                  <li className="flex items-center gap-2">
+                    <Phone className="mr-2 text-[#921d7f]" />
                     +48 789 790 860
                   </li>
-                  <li className="flex justify-start items-center gap-2">
-                    <Phone className="mr-2 text-blue-500" />
+                  <li className="flex items-center gap-2">
+                    <Phone className="mr-2 text-[#921d7f]" />
                     +48 690 515 224
                   </li>
-                  <li className="flex justify-start items-center gap-2">
-                    <Phone className="mr-2 text-blue-500" />
+                  <li className="flex items-center gap-2">
+                    <Phone className="mr-2 text-[#921d7f]" />
                     +48 502 162 365
                   </li>
-                  <li className="flex justify-start items-center gap-2">
-                    <Mail className="mr-2 text-blue-500" />
+                  <li className="flex items-center gap-2">
+                    <Mail className="mr-2 text-[#921d7f]" />
                     poradniamagnolia@gmail.com
                   </li>
-                  <li className="flex justify-start items-center gap-2">
-                    <MapPin className="mr-2 text-blue-500" />
+                  <li className="flex items-center gap-2">
+                    <MapPin className="mr-2 text-[#921d7f]" />
                     Magnolii 25, 44-207 Rybnik
                   </li>
                 </ul>
 
-                <p
-                  className={`text-md font-semibold tracking-tight mt-6 ${fontSizeClass}`}
-                >
+                <p className="text-md font-semibold tracking-tight mt-6">
                   Godziny otwarcia:
                 </p>
-                <p
-                  className={`${fontSizeClass} mb-4 flex font-semibold text-sm tracking-tight items-center`}
-                >
-                  <Clock className="mr-2 text-blue-500" />
+                <p className="mb-4 flex font-semibold text-sm tracking-tight items-center">
+                  <Clock className="mr-2 text-[#921d7f]" />
                   Poniedziałek - Piątek: 7:00 - 21:00
                 </p>
               </div>
 
-              {/* Form */}
-              <FormularzComponent />
+              
+              <ContactForm />
             </div>
 
-            {/* Column 2: Map */}
+            
             <div className="h-full">
-              <div
-                className={`${
-                  highContrast ? "bg-gray-800 bg-opacity-50" : "bg-transparent"
-                } rounded-lg p-2 h-full`}
-              >
+              <div className="rounded-lg p-2 h-full">
                 <iframe
                   width="100%"
                   height="100%"

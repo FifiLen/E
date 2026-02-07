@@ -22,9 +22,11 @@ interface ServiceSection {
   accordionItems: { title: string; content: string }[];
   ctaText: string;
   ctaLink: string;
+  id: string;
 }
 
 const ServiceSectionComponent: React.FC<ServiceSection & { index: number }> = ({
+  id,
   title,
   description,
   imageSrc,
@@ -70,6 +72,7 @@ const ServiceSectionComponent: React.FC<ServiceSection & { index: number }> = ({
     <section className="py-12 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <div
+          id={id}
           className={`flex flex-col lg:flex-row items-stretch ${
             isEven ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
@@ -142,6 +145,7 @@ export function AdictionServicesComponent() {
 
   const serviceSections: ServiceSection[] = [
     {
+      id: "e-uzaleznienia",
       title: "Terapia E-uzależnień",
       description:
         "Zapraszamy dorosłych, dzieci i młodzież do skorzystania z terapii e-uzależnień. Oferujemy indywidualnie dostosowane sesje z doświadczonymi specjalistami, wsparcie w zrozumieniu i zwalczaniu uzależnień od elektroniki i internetu oraz skuteczne narzędzia i strategie terapeutyczne.",
@@ -153,6 +157,7 @@ export function AdictionServicesComponent() {
     },
 
     {
+      id: "uzaleznienia",
       title: "Terapia uzależnień",
       description:
         "Zapraszamy dorosłych, dzieci i młodzież do skorzystania z terapii uzależnień od używek. Oferujemy indywidualnie dostosowane sesje z doświadczonymi specjalistami, wsparcie w zrozumieniu i zwalczaniu uzależnień od alkoholu, narkotyków i innych substancji oraz skuteczne narzędzia i strategie terapeutyczne.",
@@ -160,17 +165,6 @@ export function AdictionServicesComponent() {
       imageAlt: "dziecko ubierające maskę",
       accordionItems: [],
       ctaText: "Umów wizytę u Terapeuty uzależnień",
-      ctaLink: "/Kontakt",
-    },
-
-    {
-      title: "Diagnoza uzależnień",
-      description:
-        "Zapraszamy na profesjonalną diagnozę uzależnień. Nasz zespół doświadczonych specjalistów korzysta z zaawansowanych metod oceny, aby zidentyfikować problem i zalecić odpowiednie działania. Diagnoza obejmuje analizę zachowań, wywiady oraz badania, dzięki którym możliwe jest zrozumienie głęboko zakorzenionych przyczyn uzależnienia i opracowanie skutecznej strategii leczenia. Oferujemy diagnozę uzależnień od używek oraz e-uzależnień, dostosowaną do potrzeb dorosłych, dzieci i młodzieży.",
-      imageSrc: "/assets/uzaleznienie/uzaleznienie3.jpg",
-      imageAlt: "dziecko ubierające maskę",
-      accordionItems: [],
-      ctaText: "Umów się na diagnozę",
       ctaLink: "/Kontakt",
     },
   ];

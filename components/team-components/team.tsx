@@ -29,21 +29,7 @@ const staffData: StaffMember[] = [
     ),
     imageUrl: "/assets/kadra-avatary/avatar-2.svg",
   },
-  {
-    id: 2,
-    name: "Samanta Marszałek-Czaban",
-    specialty: "Neurologopeda",
-    description: (
-      <p>
-        Magister neurologopedii i&nbsp;pedagogiki, z&nbsp;dodatkową
-        specjalizacją w&nbsp;oligofrenopedagogice i&nbsp;edukacji
-        wczesnoszkolnej. Doświadczona w&nbsp;pracy logopedycznej zarówno
-        w&nbsp;szkołach, jak i&nbsp;specjalistycznych ośrodkach interwencji.
-        Wykładowca akademicki oraz trener edukacji włączającej.
-      </p>
-    ),
-    imageUrl: "/assets/kadra-avatary/avatar.svg",
-  },
+
   {
     id: 12,
     name: "Paulina Dąbrowska",
